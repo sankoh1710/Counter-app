@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            color: green;
+        }
+        .counter {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .circle-btn {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .reset-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none ;
+            border-radius: 50px ;
+            margin-top: 20px ;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter" id="counter">0</div>
+    <button class="circle-btn" onclick="increaseCount()"></button>
+    <button class="reset-btn" onclick="resetCount()">Reset</button>
+
+    <script>
+        let count = 0;
+        const counterElement = document.getElementById("counter");
+
+        function increaseCount() {
+            count++;
+            counterElement.textContent = count;
+        }
+
+        function resetCount() {
+            count = 0;
+            counterElement.textContent = count;
+        }
+    </script>
+</body>
+</html>
