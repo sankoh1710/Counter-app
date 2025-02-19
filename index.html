@@ -6,13 +6,14 @@
     <title>Counter</title>
     <style>
         body {
+            background-color: black;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             flex-direction: column;
             font-family: Arial, sans-serif;
-            color: green;
+            color: white;
         }
         .counter {
             font-size: 2em;
@@ -22,7 +23,7 @@
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            background-color: #3498db;
+            background-color: #038519;
             color: white;
             border: none;
             font-size: 1.5em;
@@ -33,8 +34,8 @@
             margin-bottom: 10px;
         }
         .reset-btn {
-            background-color: #e74c3c;
-            color: white;
+            background-color: #ffffff;
+            color: black;
             border: none ;
             border-radius: 50px ;
             margin-top: 20px ;
@@ -56,6 +57,11 @@
         function increaseCount() {
             count++;
             counterElement.textContent = count;
+
+
+            if (count === 100) {
+        alert("Good job!");
+    }
         }
 
         function resetCount() {
