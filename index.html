@@ -71,14 +71,14 @@
         function increaseCount() {
     count++;
     counterElement.textContent = count;
-
+ /* Remove the class after animation ends so it can be triggered again
     const btn = document.querySelector(".circle-btn");
     btn.classList.add("bounce");
 
-    // Remove the class after animation ends so it can be triggered again
+   
     btn.addEventListener("animationend", () => {
         btn.classList.remove("bounce");
-    }, { once: true });
+    }, { once: true });*/
 
     if (count === 100) {
         alert("Good job!");
